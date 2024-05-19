@@ -10,20 +10,29 @@ No arquivo "create_tables.sql" temos o DDL das tabelas para o Modelo_DER.png, le
 
 Modelo_DER.png - 
 Customer: É a entidade onde se encontram todos os nossos clientes, sejam eles Compradores ou Vendedores do Site. Os principais atributos são email, nome, sobrenome, sexo, endereço, data de nascimento, telefone, entre outros.
+
 Item: É a entidade onde estão localizados os produtos publicados em nosso marketplace. O volume é muito grande porque estão incluídos todos os produtos que foram publicados em algum momento. Usando o status do item ou a data de cancelamento, você pode detectar os itens ativos no marketplace. 
+
 Category: É a entidade onde se encontra a descrição de cada categoria com seu respectivo caminho. Cada item possui uma categoria associada a ele.
 Order: O pedido é a entidade que reflete as transações geradas dentro do site (cada compra é um pedido). Neste caso não teremos fluxo de carrinho de compras, portanto cada item vendido será refletido em um pedido independente da quantidade que foi adquirida.
+
 Itemhistory - É a entidade para armazenar as alterações dos preços dos itens. A solução para resolver o problema de histórico de itens seria a técnica Slowly --Changing Dimensions (SCD) em um data warehouse onde seria possível combinar os conceitos de controle de versão para garantir uma trilha de auditoria transparente. A solução permite a visualização de item quando alterado mais de uma vez ao dia, permitindo o tracking de forma transparente e já preparada para outros campos da tabela item. Uma outra solução possível seria criar um TimeStamp para cada alteração e no final do dia executar uma stored procedure para recuperar todos os itens alterados. Em ambos os casos devemos analisar a melhor para não impactar o banco de dados transacional durante o periodo de utilização.
 
 Modelo_DER_Versão2.png
 Aqui apresento uma versão melhorada com tabelas adicionais, pensando na análise de compras, recomendação, histórico de navegação, e também pensando em entidades para geração de arquivos regulatórios, sempre necessário em uma aplicação de ecommerce.
+
 User: É a entidade para controlar os usuarios e seus devidos acessos e para rastrear quem alterou os dados, quando e quais foram as alterações.
+
 Permissions: É a entidade para manipular as permissões, sejam elas a acesso de tabela, e sendo possível alteração para manipular acesso por Linha e coluna de dados
+
 Reports: É a entidade para armazear os relatórios gerados automaticamente e com metadados relevantes
+
 RegulatoryComplianceAnalysis: É a entidade para armazenar os resultados de análises de dados em relação aos requisitos regulatórios do Órgão, facilitando a comparação de resultados, encontrar anomalias, validação e correção de problemas.
+
 EncryptionKeys: É a entidade para Gerenciar chaves de criptografia e proteção dos dados sensiveis em relação a normas como LGPD.
 
 Recommendations: É a entidade para armazenar recomendações de produtos, podendo ser resultados de projetos Machine Learning.
+
 browsinghistory: É a entidade para armazenar o histórico de navegação dos clientes para melhorar a personalização
 
 São apenas alguns exemplos para evolução, podendo além disso criar nvoas entidades como Currency, ItemTranslation para facilitar a internalização de processos, como moedas estrangeiras, e tradução para os nomes dos itens e respectivas descrições. Segue exemplos básicos:
