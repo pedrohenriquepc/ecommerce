@@ -61,4 +61,11 @@ Para cada mês de 2020, são solicitados os 5 principais usuários que mais vend
 
 É solicitada uma nova tabela a ser preenchida com o preço e status dos Itens no final do dia. Lembre-se de que deve ser reprocessável. Vale ressaltar que na tabela Item teremos apenas o último status informado pelo PK definido. (Pode ser resolvido através de StoredProcedure)
 
+# API, Python e Notebook
+
+Exemplo de integração com API para download de dados, armazenando em uma camada de storage, e uma análise utilizando Jupyter Notebook podem ser encontrados nos arquivos abaixo:
+
+e-commerce Diagrama Solução.pdf - Diagrama da Solução Alto Nível e próximos passos para melhrorias futuras
+
+E_commerce.ipynb - Notebook com código baixo para conectar e fazer download de dados de uma API pública, a partir de então fazer análise exploratória dos dados, pre-processamento com engenharia de dados e extração de insights, passando até por modelos ML como clustering para identificar os grupos de itens mais próximos através do price.
 
