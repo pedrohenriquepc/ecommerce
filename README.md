@@ -69,3 +69,14 @@ e-commerce Diagrama Solução.pdf - Diagrama da Solução Alto Nível e próximo
 
 E_commerce.ipynb - Notebook com código baixo para conectar e fazer download de dados de uma API pública, a partir de então fazer análise exploratória dos dados, pre-processamento com engenharia de dados e extração de insights, passando até por modelos ML como clustering para identificar os grupos de itens mais próximos através do price.
 
+# Dashboard
+
+# Crescimento da Internet na Argentina
+
+Os arquivos abaixo mostram um exemplo de análise para os dados de crescimento na argentina, assim como o desenvolvimento de um relatório conclusivo sobre o mesmo.
+
+Dashboard_Argentina_Evolucao_Internet.pbix - Dashboard em Powerbi com gráficos para análises.
+
+Análise - Crescimento da Internet na Argentina.pdf - Relatório sobre o entendimento dos dados.
+
+
