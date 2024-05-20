@@ -75,6 +75,14 @@ E_commerce.ipynb - Notebook com código baixo para conectar e fazer download de 
 
 Os arquivos abaixo mostram um exemplo de análise para os dados de crescimento na argentina, assim como o desenvolvimento de um relatório conclusivo sobre o mesmo.
 
+# Resultado do Desafio
+
+O desafio para as análises referentes a evolução da internet na Argentina foi devido encontrar as bases de dados, primeiramente fiz uma análise textual do que seria interessante, por exemplo, comparar valores internos como Região, Cidades, entre outros, analisar depois um nivel maior do pais como um todo. Para toda análise sempre facilita primeiramente pegar o dado de maior nível e ir utilizando técnicas de análises ou perguntas (5 Porques) para ir entendendo a informação de forma mais detalhada, dessa forma tentei demonstrar o que seria interessante para um Órgão analisar a evolução da internet, quais os impactos, quais areas ajudam para suportar o impacto, e divisões adjacentes como por exemplo o que afeta no PIB. Obtive um desafio para encontrar os dados após minha análise textual, onde fiz uma geração manual para demonstrar tipos de analises, mas o principal ponto aqui foi desenhar os dashboards de uma forma bonita o qual atualmente não pratico no meu dia a dia, apenas faço as recomendações de análises, indicadores, código sql, outros, então tentei utilizar gráficos de linhas e barras para mostrar o progresso da evolução e comparação de resultados respectivamente.
+
+Para o desafio de SQL, a primeira dúvida foi que a modelagem esperada seria para um sistema transacional ou analitico, então tentei utilizar um mix de estratégia, como exemplo um DW que armazena informações históricas com rastreio, mas também uma modelagem de informações transacionais, buscando inovar para encontrar relações mais interessantes sobre dados de compra e venda, como personalizar os produtos por customer, recomendações, histórico de navegação, etc. Um outro ponto importante tentei buscar como seria uma modelagem caso fosse necessário um sistema de geração de arquivos regulatórios, modelando também informações como criptografia, acesso a dados para usuários, permissões, e no final uma sugestão também de uma modelagem para suportar mais de uma moeda, e uma tradução de nomes e descrição de itens para outra linguagem.
+
+Para o desafio do Notebook, a duvida seria até que ponto aprofundar na estratégia de API, busquei o modo mais simples com documentação padrão pandas, e foquei na extração de insights utilizando recursos python e notebook, modelando um sistema modelo não supersionado de clustering para identificar os possíveis grupos de itens mais próximos, utilizando poucos dados e poucas colunas.
+
 Dashboard_Argentina_Evolucao_Internet.pbix - Dashboard em Powerbi com gráficos para análises.
 
 Análise - Crescimento da Internet na Argentina.pdf - Relatório sobre o entendimento dos dados.
